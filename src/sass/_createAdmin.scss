@@ -1,0 +1,46 @@
+.create_admin {
+  &-hero {
+    padding-bottom: 2rem;
+
+    h2 {
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &-form {
+    @include form-common;
+  }
+
+  input[type="submit"] {
+    padding: 1rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .create_admin {
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1rem;
+      grid-column-end: 1;
+    }
+
+    input[type="submit"] {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .create_admin {
+    input {
+      font-size: 1.2rem;
+    }
+
+    input::placeholder {
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.about {
+  @include section-common;
+  position: relative;
+  bottom: 2rem;
+
+  &-entry {
+    color: $color-primary-300;
+    font-weight: 500;
+  }
+}
+
+.map-component {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .about {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    h2 {
+      font-size: 2rem;
+    }
+
+    span {
+      font-size: 1.2rem;
+    }
+  }
+}

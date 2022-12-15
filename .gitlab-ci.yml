@@ -1,0 +1,15 @@
+image: node:latest
+#deploy
+deploy:
+  stage: deploy
+  environment: develop
+  only:
+    - dev
+  script:
+    - ls -l
+    - yarn global add firebase-tools
+    - yarn global add bower
+    - yarn install
+    - yarn build
+    - firebase use --token $FIREBASE_TOKEN_DEV $PROJECT_ID_DEV
+    - firebase deploy --token $FIREBASE_TOKEN_DEV

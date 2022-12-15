@@ -1,0 +1,48 @@
+.spaces {
+  @include section-common;
+
+  li {
+    font-size: 0.9rem;
+    list-style-position: inside;
+  }
+
+  img {
+    border-radius: 0.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .spaces {
+    padding: 2rem;
+
+    ul {
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+    }
+
+    li {
+      font-size: 1rem;
+    }
+
+    &__img {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .spaces {
+    h2 {
+      font-size: 2rem;
+    }
+
+    span {
+      font-size: 1.2rem;
+    }
+
+    li {
+      font-size: 1.2rem;
+    }
+  }
+}

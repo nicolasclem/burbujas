@@ -1,0 +1,85 @@
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../public/assets/hero-img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+
+  &__col {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  h1 {
+    color: white;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  button {
+    background-image: linear-gradient(0deg, #ffffff1a, #ffffff1a),
+      linear-gradient(262.43deg, #d56441 26.53%, #e69010 73.45%);
+    color: $color-white-200;
+    padding: 0.5rem 4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.6rem;
+    box-shadow: 9px 8px 41px rgba(232, 155, 39, 0.8);
+    transition: 0.25s ease-in-out;
+
+    &:hover {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0.1)
+        ),
+        linear-gradient(262.43deg, #d56441 26.53%, #e69010 73.45%);
+      box-shadow: 9px 8px 41px rgba(232, 155, 39, 0.8);
+    }
+
+    &:active {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0.1)
+        ),
+        linear-gradient(262.43deg, #d56441 26.53%, #e69010 73.45%);
+      box-shadow: 9px 8px 41px rgba(232, 155, 39, 0.8);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    h1 {
+      font-size: 2.8rem;
+    }
+
+    button {
+      padding: 0.5rem 4rem;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    button {
+      padding: 0.5rem 4rem;
+      font-size: 2rem;
+    }
+  }
+}
